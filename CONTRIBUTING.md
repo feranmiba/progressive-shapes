@@ -19,3 +19,21 @@ Ready to help build the future of progressive shapes? Here’s how to get starte
 2. **Clone your fork** to your local machine:
    ```bash
    git clone https://github.com/your-username/progressive-shapes.git
+
+3. **Create a new branch** on your local machine
+   ```bash
+   git checkout -b your-feature-branch
+4. **Make your changes** in that branch.
+5. **Commit your changes** with clear, descriptive messages.
+6. **Push your branch** to your fork:
+   ```bash
+   git push origin your-feature-branch
+7. **Open a Pull Request** (PR) from your branch into the main repository’s main branch.
+
+
+## Important guidelines
+
+- Please ensure each new component or enhancement is highly customizable via props. This ensures users can easily adjust appearance and behavior to fit diverse projects without needing to modify internal code.
+- Write clean, readable code with proper documentation.
+- Make sure your code passes existing tests and add new tests if necessary.
+- Follow the existing coding style and conventions used in the project.

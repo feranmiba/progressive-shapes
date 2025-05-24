@@ -23,9 +23,46 @@ Your contributions help create a richer, more versatile library that benefits de
 
 ---
 
+
+
+
+
+## Usage
+
+
+```tsx
+import React from 'react';
+import CircularProgress from 'progressive-shapes';
+
+const App = () => {
+  return (
+    <div>
+      {/* Example with default styles */}
+      <CircularProgress currentStep={3} totalSteps={5} />
+
+      {/* Example with custom radius, stroke, and colors */}
+      <CircularProgress
+        currentStep={2}
+        totalSteps={8}
+        radius={30}
+        stroke={8}
+        strokeBackgroundColor="#ccc"
+        strokeProgressColor="#ff6347"
+        className="my-custom-wrapper"
+        textClassName="my-custom-text"
+      />
+    </div>
+  );
+};
+
+export default App;
+```
+
+
 ## Installation
 
 ```bash
 npm install progressive-shapes
 # or
 yarn add progressive-shapes
+```
