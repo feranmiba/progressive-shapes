@@ -1,11 +1,15 @@
 {
   "name": "progressive-shapes",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "peerDependencies": {
     "react": "^18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feranmiba/progressive-shapes.git"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
