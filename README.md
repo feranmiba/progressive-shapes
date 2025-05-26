@@ -32,7 +32,7 @@ Your contributions help create a richer, more versatile library that benefits de
 
 ```tsx
 import React from 'react';
-import CircularProgress from 'progressive-shapes';
+import { CircularProgress } from 'progressive-shapes';
 
 const App = () => {
   return (
