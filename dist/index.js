@@ -16,5 +16,27 @@ const CircularProgress = ({ currentStep, totalSteps, radius = 23, stroke = 6, st
             totalSteps)));
 };
 
+const HorizontalProgress = ({ currentStep, totalSteps, height = 8, backgroundColor = '#D9D9D9', progressColor = '#6CBB2D', className = '' }) => {
+    const percentage = (currentStep / totalSteps) * 100;
+    return (React.createElement("div", { className: `w-full rounded-full overflow-hidden ${className}`, style: { height } },
+        React.createElement("div", { className: "w-full h-full", style: { backgroundColor } },
+            React.createElement("div", { className: "h-full transition-all duration-300", style: {
+                    width: `${percentage}%`,
+                    backgroundColor: progressColor,
+                } }))));
+};
+
+const VerticalProgress = ({ currentStep, totalSteps, width = 8, backgroundColor = '#D9D9D9', progressColor = '#6CBB2D', className = '' }) => {
+    const percentage = (currentStep / totalSteps) * 100;
+    return (React.createElement("div", { className: `h-full flex flex-col justify-end rounded-full overflow-hidden ${className}`, style: { width } },
+        React.createElement("div", { className: "w-full h-full", style: { backgroundColor } },
+            React.createElement("div", { className: "w-full transition-all duration-300", style: {
+                    height: `${percentage}%`,
+                    backgroundColor: progressColor,
+                } }))));
+};
+
 exports.CircularProgress = CircularProgress;
+exports.HorizontalProgress = HorizontalProgress;
+exports.VerticalProgress = VerticalProgress;
 //# sourceMappingURL=index.js.map
