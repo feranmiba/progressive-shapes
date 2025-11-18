@@ -20,8 +20,14 @@ const HorizontalProgress: React.FC<HorizontalProgressProps> = ({
   const percentage = (currentStep / totalSteps) * 100;
 
   return (
-    <div className={`w-full rounded-full overflow-hidden ${className}`} style={{ height }}>
-      <div className="w-full h-full" style={{ backgroundColor }}>
+    <div
+      className={`w-full rounded-full overflow-hidden ${className}`}
+      style={{ height }}
+    >
+      <div
+        className="h-full w-full"
+        style={{ backgroundColor }}
+      >
         <div
           className="h-full transition-all duration-300"
           style={{
@@ -35,3 +41,5 @@ const HorizontalProgress: React.FC<HorizontalProgressProps> = ({
 };
 
 export default HorizontalProgress;
+
+

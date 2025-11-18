@@ -21,9 +21,10 @@ const VerticalProgress: React.FC<VerticalProgressProps> = ({
 
   return (
     <div
-      className={`h-full flex flex-col justify-end rounded-full overflow-hidden ${className}`}
-      style={{ width }}
-    >
+    className={`flex flex-col justify-end rounded-full overflow-hidden ${className}`}
+    style={{ width, height: '100%', minHeight: 120 }}
+  >
+  
       <div className="w-full h-full" style={{ backgroundColor }}>
         <div
           className="w-full transition-all duration-300"
