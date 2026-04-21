@@ -6,3 +6,7 @@ export { default as Heart } from './components/Heart';
 export { default as Diamond } from './components/Diamond';
 export { default as Triangle } from './components/Triangle';
 export { default as Donut } from './components/Donut';
+export { default as Hexagon } from './components/Hexagon';
+export { default as Pentagon } from './components/Pentagon';
+export { default as Cloud } from './components/Cloud';
+export { default as Moon } from './components/Moon';

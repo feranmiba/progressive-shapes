@@ -44,6 +44,7 @@ const Diamond:  React.FC<DiamondProps> = ({
                     height={percentage}
                     fill={progressColor}
                     clipPath={`url(#${clipId})`}
+                    style={{ transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)' }}
                 />
             </svg>
         </div>

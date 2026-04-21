@@ -40,10 +40,12 @@ const Star: React.FC<StarProps> = ({
                     clipPath={`url(#${clipId})`}
                />
                 <rect
-                    width={`${percentage}%`}
-                    height="100"
+                    y={100 - percentage}
+                    width="100"
+                    height={percentage}
                     fill={progressColor}
                     clipPath={`url(#${clipId})`}
+                    style={{ transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)' }}
                  />
             </svg>
         </div>

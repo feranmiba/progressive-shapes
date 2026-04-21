@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface TriangleProps {
+export interface CloudProps {
     currentStep: number;
     totalSteps: number;
     size?: number;
@@ -9,17 +9,17 @@ export interface TriangleProps {
     className?: string;
 }
 
-
-const Triangle: React.FC<TriangleProps> = ({
+const Cloud: React.FC<CloudProps> = ({
     currentStep,
     totalSteps,
     size = 50,
     backgroundColor = '#D9D9D9',
-    progressColor = '#00FF00',
+    progressColor = '#3498DB',
     className = ''
 }) => {
     const percentage = (currentStep / totalSteps) * 100;
     const clipId = React.useId();
+
     return (
         <div className={`relative inline-block ${className}`} style={{ width: size, height: size }}>
             <svg
@@ -29,7 +29,7 @@ const Triangle: React.FC<TriangleProps> = ({
             >
                 <defs>
                     <clipPath id={clipId}>
-                        <polygon points="50,0 100,100 0,100" />
+                        <path d="M25,60 C25,45 35,35 50,35 C55,20 75,20 80,35 C95,35 95,55 85,65 C95,75 85,90 70,85 C65,95 45,95 40,85 C25,90 10,75 25,60 Z" />
                     </clipPath>
                 </defs>
                 <rect
@@ -49,6 +49,6 @@ const Triangle: React.FC<TriangleProps> = ({
             </svg>
         </div>
     );
-
 }
-export default Triangle;
+
+export default Cloud;

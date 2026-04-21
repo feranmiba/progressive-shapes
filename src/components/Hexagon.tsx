@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface TriangleProps {
+export interface HexagonProps {
     currentStep: number;
     totalSteps: number;
     size?: number;
@@ -9,17 +9,17 @@ export interface TriangleProps {
     className?: string;
 }
 
-
-const Triangle: React.FC<TriangleProps> = ({
+const Hexagon: React.FC<HexagonProps> = ({
     currentStep,
     totalSteps,
     size = 50,
     backgroundColor = '#D9D9D9',
-    progressColor = '#00FF00',
+    progressColor = '#8E44AD',
     className = ''
 }) => {
     const percentage = (currentStep / totalSteps) * 100;
     const clipId = React.useId();
+
     return (
         <div className={`relative inline-block ${className}`} style={{ width: size, height: size }}>
             <svg
@@ -29,7 +29,7 @@ const Triangle: React.FC<TriangleProps> = ({
             >
                 <defs>
                     <clipPath id={clipId}>
-                        <polygon points="50,0 100,100 0,100" />
+                        <polygon points="25,5 75,5 100,50 75,95 25,95 0,50" />
                     </clipPath>
                 </defs>
                 <rect
@@ -49,6 +49,6 @@ const Triangle: React.FC<TriangleProps> = ({
             </svg>
         </div>
     );
-
 }
-export default Triangle;
+
+export default Hexagon;

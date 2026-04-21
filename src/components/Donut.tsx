@@ -30,8 +30,11 @@ const Donut: React.FC<DonutProps> = ({
             >
                 <defs>
                     <clipPath id={clipId}>
-                        <circle cx="50" cy="50" r="40" />
-                        <circle cx="50" cy="50" r="20" fill="white" />
+                        <path 
+                            fillRule="evenodd" 
+                            clipRule="evenodd" 
+                            d="M 50,50 m -40,0 a 40,40 0 1,0 80,0 a 40,40 0 1,0 -80,0 M 50,50 m -20,0 a 20,20 0 1,1 40,0 a 20,20 0 1,1 -40,0" 
+                        />
                     </clipPath>
                 </defs>
                 <rect
@@ -46,6 +49,7 @@ const Donut: React.FC<DonutProps> = ({
                     height={percentage}
                     fill={progressColor}
                     clipPath={`url(#${clipId})`}
+                    style={{ transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)' }}
                 />
             </svg>
         </div>

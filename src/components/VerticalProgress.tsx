@@ -25,7 +25,7 @@ const VerticalProgress: React.FC<VerticalProgressProps> = ({
     style={{ width, height: '100%', minHeight: 120 }}
   >
   
-      <div className="w-full h-full" style={{ backgroundColor }}>
+      <div className="w-full h-full flex flex-col-reverse" style={{ backgroundColor }}>
         <div
           className="w-full transition-all duration-300"
           style={{
